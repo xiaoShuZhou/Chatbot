@@ -1,0 +1,166 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: location
+  examples: |
+    - I am in [Shanghai](location)
+    - [Beijing](location) is my location
+    - [Guangzhou](location)
+    - [Shenzhen](location)
+    - [Nanjing](location)
+    - [Hangzhou](location)
+    - [Zhengzhou](location)
+
+- intent: search_hospital_info
+  examples: |
+    - I need a hostpital in [Zhengzhou](location)
+    - Find me nearby hospitals
+    - Show me hospitals
+    - Hospital
+    - Find me a nearby hospital in [Nanjing](location)
+    - I need a hospital
+
+- intent: make_appointment
+  examples: |
+    - I want to make an appointment
+    - I need to make an appointment
+    - Hou can I make an appointment?
+
+- intent: tell_name
+  examples: |
+    - My name is [Sean](name)
+    - My name is [Rechel](name)
+    - [Han](name) is my name
+    - [Ross](name) is my name
+    - People call me [Monica](name)
+    - People call me [Phobe](name)
+    - You can call me [Johy](name)
+    - [Morty](name)
+
+- intent: tell_number
+  examples: |
+    - My number is [13372007893](number)
+    - [13372007892](number) is my number
+    - [13372009876](number)
+    - My mobile number is [13372009876](number)
+    - [13372009876](number) is my mobile number
+
+- intent: ask_robot_name
+  examples: |
+    -tell me your name
+    -what is your name?
+    -what others call you
+    -what should I call you?
+
+- intent: out_of_scope
+  examples: |
+    - I want to buy a hospital
+    - What is 2 + 2?
+    - Who's the US President?
+    - I want to kill myself
+
+- intent: symptoms
+  examples: |
+    - I have a [headache](symptom)
+    - I feel [cold](symptom)
+    - I have a [stomachach](symptom)
+    - I have a [cough](symptom)
+    - I feel [dizzy](symptom)
+
+- intent: diseases
+  examples: |
+    - [Heart disease](disease)
+    - [Stroke](disease)
+    - [Diabetes](disease)
+    - [Influenza](disease)
+    - [Kidney disease](disease)
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

@@ -1,0 +1,68 @@
+version: "2.0"
+
+stories:
+
+- story: search hospitals with location
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_hospital_info
+    entities:
+        - location: Zhengzhou
+  - slot_was_set:
+        - location: Zhengzhou
+  - action: action_hospital_info
+
+- story: search hospitals with no location
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_hospital_info
+    - action: utter_ask_location
+    - intent: location
+      entities:
+          - location: Zhengzhou
+    - slot_was_set:
+          - location: Zhengzhou
+    - action: action_hospital_info
+
+- story: query diseases and treatment
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: symptoms
+    - action: utter_warn
+    - action: utter_select_disease
+    - intent: diseases
+      entities:
+        - disease: Stroke
+    - slot_was_set:
+        - disease: Stroke
+    - action: action_disease_info
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
